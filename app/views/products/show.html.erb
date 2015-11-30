@@ -1,0 +1,21 @@
+<div class="content">
+  <div class="content-padded">
+
+    <p id="notice"><%= notice %></p>
+    <%= link_to 'Back', products_path, class: "icon icon-left btn btn-link" %>
+    <div class="card">
+      <ul class="table-view">
+        <li class="table-view-cell">
+          <%= @product.name %> $<%= @product.price %>
+          <%= link_to 'Delete', product_path(@product), method: :delete, class: "btn btn-negative"%>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="content-padded">
+    <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-positive btn-block"%>
+
+
+  </div>
+</div>

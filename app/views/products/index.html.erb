@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<div class="content">
+  <div class="content-padded">
+    <h3>Product list     <%= link_to "Add product", new_product_path, class:"btn btn-primary pull-right" %>
+    </h3>
+    <p>This is products you need to buy.</p>
+  </div>
+  <div class="card">
+    <ul class="table-view">
+
+      <% @products.each do |product|  %>
+        <li class="table-view-cell">
+          <%= link_to product.name, product %>
+          <%= link_to 'Delete', product_path(product), method: :delete, class: "btn btn-negative"%>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+

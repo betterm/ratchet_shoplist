@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RatchetShoplist</title>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/css/ratchet.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/css/ratchet-theme-ios.css" rel="stylesheet">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/js/ratchet.js"></script>
+</head>
+<body>
+<header class="bar bar-nav">
+  <a href="#myModalexample" class="icon icon-gear pull-right"></a>
+  <%= link_to "Shop list" , root_path,  class: "title" %>
+</header>
+
+<%= yield %>
+
+  <div id="myModalexample" class="modal">
+    <header class="bar bar-nav">
+      <a class="icon icon-close pull-right" href="#myModalexample"></a>
+      <h1 class="title">Modal</h1>
+    </header>
+
+    <div class="content">
+      <p class="content-padded">The content.</p>
+    </div>
+  </div>
+
+
+</body>
+</html>

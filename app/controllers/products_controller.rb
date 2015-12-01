@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy, :complete, :not_complete]
+  before_action :set_product, only: [:edit, :update, :destroy, :complete, :not_complete]
   before_action :authenticate_user!
 
   # GET /products
@@ -8,10 +8,6 @@ class ProductsController < ApplicationController
     @products = current_user.products.order('completed DESC')
   end
 
-  # GET /products/1
-  # GET /products/1.json
-  def show
-  end
 
   # GET /products/new
   def new

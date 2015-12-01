@@ -118,7 +118,6 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.15.0)
     rake (10.4.2)
-    ratchet-sass (2.0.2)
     rdoc (4.2.0)
       json (~> 1.4)
     responders (2.1.0)
@@ -175,7 +174,6 @@ DEPENDENCIES
   rack-timeout
   rails (= 4.2.4)
   rails_12factor
-  ratchet-sass
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

@@ -1,0 +1,25 @@
+<div class="row clearfix">
+  <% if product.completed? %>
+    <div class="complete pull-left">
+      <%= link_to not_complete_product_path(@product || product), method: :patch do %>
+        <p style="opacity: 0.4;"><strike><%= product.name %>: <%= product.quantity %> </strike></p>
+      <% end %>
+    </div>
+    <div class="trash pull-right">
+      <%= link_to product_path(@product || product), method: :delete do %>
+        <i class="fa fa-trash" style="color: darkred;"></i>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="complete pull-left">
+      <%= link_to complete_product_path(@product || product), method: :patch do %>
+        <p><%= product.name %>: <%= product.quantity %></p>
+      <% end %>
+    </div>
+    <div class="trash pull-right">
+      <%= link_to product_path(@product || product), method: :delete do %>
+        <i class="fa fa-trash" style="color: darkred;"></i>
+      <% end %>
+    </div>
+  <% end %>
+</div>

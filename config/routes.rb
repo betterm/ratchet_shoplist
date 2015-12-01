@@ -2,8 +2,12 @@ Rails.application.routes.draw do
 
   get 'public/index'
 
-  resources :products
-  resources :products
+  resources :products do
+    member do
+      patch :complete
+      patch :not_complete
+    end
+  end
   root "products#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

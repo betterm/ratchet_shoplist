@@ -68,6 +68,12 @@ class ProductsController < ApplicationController
     redirect_to products_path
   end
 
+  def remove_all
+    current_user.products.delete_all
+    flash[:notice] = "You have removed all results!"
+    redirect_to root_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product

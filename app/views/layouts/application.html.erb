@@ -16,39 +16,13 @@
 </head>
 <body>
 <header class="bar bar-nav">
-  <a href="#myModal" class="icon icon-gear pull-right"></a>
-  <%= link_to "sign in", new_user_session_path, class: "icon icon-home pull-left"%>
+  <%= link_to "sign in", new_user_session_path, class: "icon pull-left"%>
   <%= link_to "Shop list" , root_path,  class: "title" %>
+  <%= link_to "sign out", destroy_user_session_path, method: "delete", class: "icon pull-right"%>
+
 </header>
 
 <%= yield %>
-
-  <div id="myModal" class="modal">
-    <header class="bar bar-nav">
-      <a class="icon icon-close pull-right" href="#myModal"></a>
-      <h1 class="title">Settings Example</h1>
-    </header>
-
-    <div class="content">
-      <h5 class="content-padded">App settings</h5>
-
-      <ul class="table-view">
-        <li class="table-view-cell media">
-          <span class="media-object pull-left icon icon-compose"></span>
-          <div class="media-body">
-            Enable weight calculator
-          </div>
-          <div class="toggle">
-            <div class="toggle-handle"></div>
-          </div>
-        </li>
-      </ul>
-      <div>
-        <button class="btn btn-positive btn-block">Save settings</button>
-        <%= link_to "Sign out", destroy_user_session_path, method: "delete", class: "btn btn-negative btn-block" %>
-      </div>
-    </div>
-  </div>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

@@ -5,9 +5,9 @@
     <div>
       <%= render "form"%></div>
     <h3>Product list</h3>
-    <p>This is products you need to buy.</p>
+    <p>This is products you need to buy. Click on product to mark as completed.</p>
   </div>
-  <div class="card products_wrapper">
+  <div class="card">
     <ul class="table-view">
       <% @products.each do |product| if @products  %>
         <li class="table-view-cell">
@@ -16,6 +16,9 @@
       <% end %>
       <% end %>
     </ul>
+    <%if @products.count >= 2 %>
+    <%= link_to "Delete all", remove_all_products_path, method: "get", class: "btn btn-negative btn-block"  %>
+    <% end %>
   </div>
 </div>
 

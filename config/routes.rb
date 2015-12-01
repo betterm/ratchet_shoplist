@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :products do
+    collection do
+      get 'remove_all'
+    end
     member do
       patch :complete
       patch :not_complete

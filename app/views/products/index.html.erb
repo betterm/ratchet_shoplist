@@ -2,15 +2,16 @@
 
 <div class="content">
   <div class="content-padded">
-    <h3>Product list     <%= link_to "Add product", new_product_path, class:"btn btn-primary pull-right" %>
-    </h3>
+    <div>
+      <%= render "form"%></div>
+    <h3>Product list</h3>
     <p>This is products you need to buy.</p>
   </div>
   <div class="card products_wrapper">
     <ul class="table-view">
       <% @products.each do |product|  %>
         <li class="table-view-cell">
-          <h3><%= render :partial => "products/product", :locals => {:product => product} %></h3>
+          <p><%= render :partial => "products/product", :locals => {:product => product} %></p>
         </li>
       <% end %>
     </ul>

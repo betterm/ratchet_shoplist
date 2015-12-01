@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'public/index'
+  devise_for :users
 
   resources :products do
     member do

@@ -24,6 +24,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'ratchet-sass'
 gem 'unicorn'
 gem 'rack-timeout'
+gem 'devise'
 
 
 # Use ActiveModel has_secure_password

@@ -25,6 +25,7 @@ gem 'ratchet-sass'
 gem 'unicorn'
 gem 'rack-timeout'
 gem 'devise'
+gem 'rails_12factor'
 
 
 # Use ActiveModel has_secure_password

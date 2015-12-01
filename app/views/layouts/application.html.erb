@@ -16,9 +16,12 @@
 </head>
 <body>
 <header class="bar bar-nav">
-  <%= link_to "sign in", new_user_session_path, class: "icon pull-left"%>
+  <% if user_signed_in? %>
+    <%= link_to "sign out", destroy_user_session_path, method: "delete", class: "icon pull-right"%>
+  <% else %>
+    <%= link_to "sign in", new_user_session_path, class: "icon pull-right"%>
+  <% end %>
   <%= link_to "Shop list" , root_path,  class: "title" %>
-  <%= link_to "sign out", destroy_user_session_path, method: "delete", class: "icon pull-right"%>
 
 </header>
 

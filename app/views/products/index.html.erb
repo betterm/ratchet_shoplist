@@ -9,7 +9,7 @@
   </div>
   <div class="card products_wrapper">
     <ul class="table-view">
-      <% @products.each do |product|  %>
+      <% @products.each do |product| if @products  %>
         <li class="table-view-cell">
           <p><%= render :partial => "products/product", :locals => {:product => product} %></p>
         </li>
